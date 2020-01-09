@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -14,38 +15,20 @@
     <!-- Div wrapping the page -->
     <div class="container">
 
-        <h1> Password Generator</h1>
-        <!-- Div containing the actual generator -->
-        <div class="genBody">
+        <header><h1>Password Generator</h1></header>
+        <!-- Table containing the generator itself -->
+        <div class="generatorBody">
 
-            <header class="genHead">
-                <h3>Generate a Password</h3>
-            </header>
+            <h3>Generate a Password</h3>
 
-            <!-- Text area for generated password -->
-            <div class="passTextCont">
-            
-                <span class="passText">Your secure password</span>
-
-            </div>
-
-            <!-- Footer containing the buttons for generator -->
-            <footer>
-
-                <button>
-                    Generate Password
-                </button>
-
-                <button>
-                    Copy to Clipboard
-                </button>
-
-            </footer>
+            <textarea readonly="readonly"></textarea>
 
         </div>
 
     </div>
     
 </body>
+
+<script src="script.js"></script>
 
 </html>
