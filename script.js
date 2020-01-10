@@ -15,7 +15,7 @@ const includeUpper = confirm("Include uppercase?")
 const includeNum = confirm ("Include numbers?")
 const includeSpecial = confirm("Include special characters?")
 //Variables for character inclusions
-let char = []
+let char = [];
 //Defining conditionals for character inclusion variables
 if(includeLower && includeUpper && includeNum && includeSpecial) {
     char = lowerCase.concat(upperCase, numbers, specialChars)
@@ -27,12 +27,19 @@ if(includeLower && includeUpper && includeNum && includeSpecial) {
     char = upperCase.concat(numbers, specialChars)
 }else if (includeNum && includeSpecial) {
     char = numbers.concat(specialChars)
-}
+};
 //Variable for generated password
 var password = "";
 for(i = 0; i < parsedLength; i++) {
     password += char[Math.floor(Math.random() * char.length)]
-    }
+    };
 document.getElementById("textArea").value = password;
-}
-document.getElementById('genText').addEventListener('click', genPass)
+};
+document.getElementById('gen').addEventListener('click', genPass);
+//Function for copying generated password to clipboard
+function copy() {
+    var copyText = document.querySelector("#textArea");
+    copyText.select();
+    document.execCommand("copy");
+  };
+  document.querySelector("#copy").addEventListener("click", copy);
