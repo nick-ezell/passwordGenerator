@@ -32,9 +32,7 @@ if(includeLower && includeUpper && includeNum && includeSpecial) {
 var password = "";
 for(i = 0; i < parsedLength; i++) {
     password += char[Math.floor(Math.random() * char.length)]
-}
+    }
 document.getElementById("textArea").value = password;
 }
 document.getElementById('genText').addEventListener('click', genPass)
-
-
