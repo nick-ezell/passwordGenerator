@@ -1,76 +1,40 @@
-
-
-//Arrays containing our characters
-
-let lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
-"l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
-
- upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
- "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
-
- numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-
- specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "?"]
-
-
-//Prompt to ascertain passLength
-let passLength = prompt('Enter (using a number between 8-128) your preferred password length.') 
-//Changing passLength string to integer
-let parsedLength = parseInt(passLength)
-//Logging parsedLength for integrity
-console.log("Password length: " + parsedLength)
-
-//Confirmations for used character types
-let chooseLower = confirm("Include lowercase?")     
-
-let chooseUpper = confirm("Include uppercase?")
-    
-let chooseNum = confirm ("Include numbers?")
-    
-let chooseSpecial = confirm("Include special characters?")
-
-//Variables for character inclusions
-var allChar = [];
-
-if(chooseLower && chooseUpper && chooseNum && chooseSpecial) {
-    allChar = lowerCase.concat(upperCase, numbers, specialChars)
-}
-
-
-else if(chooseLower && chooseUpper && chooseNum) {
-    var noSpec = lowerCase.concat(upperCase, numbers)
-}
-
-else if(chooseLower && chooseUpper) {
-    var onlyAlph = lowerCase.concat(upperCase)
-}
-
-else if(chooseUpper && chooseNum && chooseSpecial) {
-    var noLower = upperCase.concat(numbers, specialChars)
-}
-
-
-
 //Loop for password generation
-
-function passGen(char) {
-    console.log(char)
-    var password = "";
-    for(i = 0; i < parsedLength; i++) {
-        var randomNum = Math.floor(Math.random() * char.length);
-        //line 61 needs to be captured in a string.
-        char[randomNum]
-        
-    }
-
-    // document.getElementById("textArea").value = password
+function genPass() {
+//Arrays containing our characters
+const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+const specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "?"]
+//Prompt to ascertain passLength
+const passLength = prompt('Enter (using a number between 8-128) your preferred password length.') 
+//Changing passLength string to integer
+const parsedLength = parseInt(passLength)
+//Confirmations for used character types
+const includeLower = confirm("Include lowercase?")    
+const includeUpper = confirm("Include uppercase?")
+const includeNum = confirm ("Include numbers?")
+const includeSpecial = confirm("Include special characters?")
+//Variables for character inclusions
+let char = []
+//Defining conditionals for character inclusion variables
+if(includeLower && includeUpper && includeNum && includeSpecial) {
+    char = lowerCase.concat(upperCase, numbers, specialChars)
+}else if(includeLower && includeUpper && includeNum) {
+    char = lowerCase.concat(upperCase, numbers)
+}else if(includeLower && includeUpper) {
+    char = lowerCase.concat(upperCase)
+}else if(includeUpper && includeNum && includeSpecial) {
+    char = upperCase.concat(numbers, specialChars)
+}else if (includeNum && includeSpecial) {
+    char = numbers.concat(specialChars)
 }
-
-passGen(allChar);
-
-
-
-
-
+//Variable for generated password
+var password = "";
+for(i = 0; i < parsedLength; i++) {
+    password += char[Math.floor(Math.random() * char.length)]
+}
+document.getElementById("textArea").value = password;
+}
+document.getElementById('genText').addEventListener('click', genPass)
 
 

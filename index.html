@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en-us">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +7,19 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
     <!-- Div wrapping the page -->
     <div class="container">
-
         <header><h1>Password Generator</h1></header>
         <!-- Table containing the generator itself -->
         <div class="generatorBody">
-
             <h3>Generate a Password</h3>
-
             <textarea readonly="readonly" id="textArea">Your Secure Password</textarea>
                 <br>
-            <button class="generateText">Generate Password</button>
-
-            <button class="copyPass">Copy to Clipboard</button>
-
+            <button class='btn' id="genText">Generate Password</button>
+            <button id="copyPass">Copy to Clipboard</button>
         </div>
-
     </div>
-    
+    <script src="script.js"></script>
 </body>
-
-<script src="script.js"></script>
-
 </html>

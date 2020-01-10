@@ -3,19 +3,16 @@ html {
     padding: 0;
     color: #777;
 }
-
 .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-
 header {
     width: 100%;
     text-align: center;
 }
-
 textarea {
     resize: none;
 }
