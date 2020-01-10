@@ -1,5 +1,6 @@
 @media only screen and (max-width: 502px) {
     body {
+        background-image: url("../backgroundImage.jpg");
         font-family: 'Montserrat', sans-serif;
         display: flex;
         flex-direction: column;
@@ -8,18 +9,24 @@
         margin: 0;
         padding: 0;
     }
+    .wrapper {
+        position: relative;
+    }
     .container {
         margin-top: 15vh;
+        padding: 2em;
         align-items: center;
         justify-content: center;
         background-color: #dadada;
         width: 60vw;
-        border: solid .5px #888;
+        border: solid .25em #dcdcdc;
+        border-radius: 15em;
         box-shadow: 10px 10px 5px #ccc;
     }
     header {
         width: 100%;
         text-align: center;
+        border-bottom-color: #000;
     }
     textarea {
         resize: none;
@@ -29,14 +36,38 @@
         text-align: center;
         padding-top: 19vh;
         margin-left: 10vw;
+        border: inset .25em #f2f3f7;
+        border-radius: .5em;
     }
     footer {
         border-top-color: #000;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
     #pageFoot {
+        height: 10vh;
+        width: 100vw;
+        background: #666;
+        border-top: solid #4aaaa5 8px;
+        color: #fff;
         margin-top: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
     }
     a {
-        color: #000;
+        color: #fff;
+    }
+    button {
+        margin: 8%;
+        height: 10vh;
+        border-radius: 5em;
+        border: solid .2em #40a7a1;
+        font-size: 15px;
+        background-color: #4aaaa5;
+        color: #fff;
+        box-shadow: 10px 10px 5px #ccc;
     }
 }
