@@ -16,19 +16,24 @@
         margin-top: 15vh;
         align-items: center;
         justify-content: center;
-        background-color: #dadada;
+        background-color: #fff;
         width: 60vw;
-        border: solid .25em #dcdcdc;
+        border:  solid .25em #cbcbcb;
         border-radius: 10em;
         box-shadow: 10px 10px 5px #ccc;
     }
     header {
         width: 100%;
         text-align: center;
+        padding-top: 2.5em;
+        padding-bottom: 1em;
         border-bottom-color: #000;
+        color: #4aaaa5;
     }
     textarea {
         resize: none;
+        color: #4aaaa5;
+        background: rgba(255, 255, 255, 0.913);
         font-size: 18px;
         height: 20vh;
         width: 40vw;
@@ -55,18 +60,26 @@
         align-items: center;
         justify-content: center;
         bottom: 0;
+        font-size: 15px;
     }
     a {
         color: #fff;
     }
     button {
         margin: 8%;
-        height: 10vh;
-        border-radius: 5em;
+        padding: 15px 50px;
+        text-transform: uppercase;
+        background: #4aaaa5;
         border: solid .2em #40a7a1;
-        box-shadow: 10px 10px 5px #ccc;
-        font-size: 15px;
-        background-color: #4aaaa5;
         color: #fff;
+        font-weight: 600;
+        font-size: .75rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .4s;
+    }
+    button:hover {
+            opacity: 0.8;
+            box-shadow: 10px 10px 5px #4aaaa5b6;;
     }
 }

@@ -61,12 +61,19 @@
     }
     button {
         margin: 8%;
-        height: 10vh;
-        border-radius: 5em;
+        padding: 15px 50px;
+        text-transform: uppercase;
+        background: #4aaaa5;
         border: solid .2em #40a7a1;
-        box-shadow: 10px 10px 5px #ccc;
-        font-size: 15px;
-        background-color: #4aaaa5;
         color: #fff;
+        font-weight: 600;
+        font-size: .75rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .4s;
     }
+    button:hover {
+            opacity: 0.8;
+            box-shadow: 10px 10px 5px #4aaaa5b6;;
     }
+}

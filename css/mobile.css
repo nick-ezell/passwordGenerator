@@ -13,20 +13,19 @@
         position: relative;
     }
     .container {
+        color: #4aaaa5;
         margin-top: 15vh;
         padding: 2em;
         align-items: center;
         justify-content: center;
-        background-color: #dadada;
+        background-color: #fff;
         width: 60vw;
         border: solid .25em #dcdcdc;
-        border-radius: 15em;
         box-shadow: 10px 10px 5px #ccc;
     }
     header {
         width: 100%;
         text-align: center;
-        border-bottom-color: #000;
     }
     textarea {
         resize: none;
@@ -38,6 +37,8 @@
         margin-left: 10vw;
         border: inset .25em #f2f3f7;
         border-radius: .5em;
+        color: #4aaaa5;
+        background: rgba(255, 255, 255, 0.907);
     }
     footer {
         border-top-color: #000;
@@ -61,13 +62,21 @@
         color: #fff;
     }
     button {
-        margin: 8%;
-        height: 10vh;
-        border-radius: 5em;
+        text-align: center;
+        width: 30vw;
+        margin-top: 5vh;
+        text-transform: uppercase;
+        background: #4aaaa5;
         border: solid .2em #40a7a1;
-        font-size: 15px;
-        background-color: #4aaaa5;
         color: #fff;
-        box-shadow: 10px 10px 5px #ccc;
+        font-weight: 600;
+        font-size: .75rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .4s;
+    }
+    button:hover {
+            opacity: 0.8;
+            box-shadow: 10px 10px 5px #4aaaa5b6;;
     }
 }
